@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>Generator Chat WA untuk AU</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="hdr">
+      <div class="hin">
+        <div class="brand">
+          <div class="logo">
+            <svg
+              width="26"
+              height="26"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#fff"
+              stroke-width="2"
+              stroke-linejoin="round"
+              stroke-linecap="round"
+            >
+              <path d="M4 5h16v11H9l-5 4z" />
+              <path d="M8.5 10.5l2 2 4-4" />
+            </svg>
+          </div>
+          <div>
+            <h1>AU <em>Studio</em></h1>
+          </div>
+        </div>
+        <div class="seg lg">
+          <button data-t="lg" data-v="id">ID</button
+          ><button data-t="lg" data-v="en">EN</button>
+        </div>
+      </div>
+    </header>
+    <div class="wrap" data-tab="chat">
+      <div class="prev">
+        <p class="tag">Generator chat WhatsApp buat AU-mu</p>
+        <div class="ctl">
+          <div class="rowb">
+            <button class="g" id="smp">Contoh</button
+            ><button class="g" id="emp">Kosongkan</button>
+          </div>
+          <div class="cap">Tampilan</div>
+          <div class="chips">
+            <button data-t="vw" data-v="chat">Chat</button
+            ><button data-t="vw" data-v="voice">Telepon</button
+            ><button data-t="vw" data-v="video">Video call</button
+            ><button data-t="vw" data-v="status">Status</button
+            ><button data-t="vw" data-v="notif">Notifikasi</button>
+          </div>
+          <div class="two">
+            <div>
+              <div class="cap">Perangkat</div>
+              <div class="seg">
+                <button data-t="pf" data-v="ios">iPhone</button
+                ><button data-t="pf" data-v="and">Android</button>
+              </div>
+            </div>
+            <div id="thw">
+              <div class="cap">Tema</div>
+              <div class="seg">
+                <button data-t="th" data-v="light">Terang</button
+                ><button data-t="th" data-v="dark">Gelap</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <select id="pf" hidden>
+          <option value="ios">iPhone</option>
+          <option value="and">Android</option>
+        </select>
+        <select id="lg" hidden>
+          <option value="id">Indonesia</option>
+          <option value="en">English</option>
+        </select>
+        <select id="wl" hidden>
+          <option value="id">Indonesia</option>
+          <option value="en">English</option>
+        </select>
+        <select id="vw" hidden>
+          <option value="chat">Chat</option>
+          <option value="voice">Telepon suara</option>
+          <option value="video">Video call</option>
+          <option value="status">Status</option>
+          <option value="notif">Notifikasi</option>
+        </select>
+        <select id="th" hidden>
+          <option value="light">Terang</option>
+          <option value="dark">Gelap</option>
+        </select>
+        <div class="phone light" id="ph">
+          <div class="sb">
+            <span id="pt">21:07</span
+            ><span
+              id="pr"
+              style="display: flex; gap: 5px; align-items: center"
+            ></span>
+          </div>
+          <div class="hd">
+            <div class="bk">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.4"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M15 5l-7 7 7 7" /></svg
+              ><i class="ubd" id="ubd"></i>
+            </div>
+            <div class="av" id="pa"></div>
+            <div class="sp">
+              <div class="hn" id="pn"></div>
+              <div class="hs" id="ps"></div>
+            </div>
+            <div class="ricons">
+              <svg
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M17 10.5V7a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-3.5l4 4v-11z"
+                /></svg
+              ><svg
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11 11 0 0 0 3.6.6 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.6 3.6a1 1 0 0 1-.25 1z"
+                /></svg
+              ><svg
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <circle cx="12" cy="5" r="2" />
+                <circle cx="12" cy="12" r="2" />
+                <circle cx="12" cy="19" r="2" />
+              </svg>
+            </div>
+          </div>
+          <div class="pin" id="pinb" style="display: none">
+            <div class="pi">
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M16 3l5 5-2 1-3 3 1 4-2 2-4-4-5 5-1-1 5-5-4-4 2-2 4 1 3-3z"
+                />
+              </svg>
+            </div>
+            <span id="pint"></span>
+          </div>
+          <div class="chat" id="ch"></div>
+          <div class="inp">
+            <svg
+              width="28"
+              height="28"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+            >
+              <path d="M12 4v16M4 12h16" />
+            </svg>
+            <div class="f">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M5 4h10a4 4 0 0 1 4 4v6l-6 6H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1z"
+                />
+                <path d="M13 20v-4a2 2 0 0 1 2-2h4" />
+              </svg>
+            </div>
+            <svg
+              width="28"
+              height="28"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linejoin="round"
+            >
+              <path
+                d="M4 8h3l1.500-2h7L17 8h3a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z"
+              />
+              <circle cx="12" cy="13" r="3.500" />
+            </svg>
+            <div class="m">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="#111">
+                <path
+                  d="M12 14a3 3 0 0 0 3-3V5a3 3 0 0 0-6 0v6a3 3 0 0 0 3 3zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.900V21h2v-3.100A7 7 0 0 0 19 11z"
+                />
+              </svg>
+            </div>
+          </div>
+          <div class="inpa">
+            <div class="fa">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+              >
+                <circle cx="12" cy="12" r="9" />
+                <path d="M8.5 14a4 4 0 0 0 7 0" />
+                <circle cx="9" cy="10" r=".8" fill="currentColor" />
+                <circle cx="15" cy="10" r=".8" fill="currentColor" /></svg
+              ><span id="ipt">Pesan</span
+              ><svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M16.5 7l-7.5 7.5a2.5 2.5 0 0 0 3.5 3.5L19.5 11A4.500 4.500 0 0 0 13 4.500L6 11.500a6.500 6.500 0 0 0 9.200 9.200"
+                /></svg
+              ><svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M4 8h3l1.5-2h7L17 8h3a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z"
+                />
+                <circle cx="12" cy="13" r="3.5" />
+              </svg>
+            </div>
+            <div class="m">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="#fff">
+                <path
+                  d="M12 14a3 3 0 0 0 3-3V5a3 3 0 0 0-6 0v6a3 3 0 0 0 3 3zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.9V21h2v-3.1A7 7 0 0 0 19 11z"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="phone dark" id="ph2" style="display: none"></div>
+        <button id="ex" class="dl">Unduh PNG</button>
+        <label class="sw frm"
+          ><span>Sertakan bingkai HP</span
+          ><input type="checkbox" id="frm" /><i></i
+        ></label>
+        <p class="note">
+          Ketuk bubble untuk edit · geser layar untuk lihat pesan lama
+        </p>
+        <p class="note">Draf tersimpan otomatis di browser ini</p>
+      </div>
+      <div class="edit">
+        <h2 class="sh">
+          Tulis plotnya, <em>biar chat-nya</em> yang bercerita.
+        </h2>
+        <div class="tabs">
+          <button data-k="chat" class="on">Pesan</button
+          ><button data-k="contact">Kontak</button
+          ><button data-k="look">Tampilan</button
+          ><button data-k="imp">Impor</button>
+        </div>
+        <section class="pane" data-p="chat">
+          <div class="card" id="comp">
+            <h2>Tulis pesan</h2>
+            <label>Jenis</label>
+            <select id="kd">
+              <option value="text">Pesan teks</option>
+              <option value="date">Tanggal</option>
+              <option value="sys">Info sistem</option>
+              <option value="voice">Voice note</option>
+              <option value="del">Pesan dihapus</option>
+              <option value="call">Telepon suara</option>
+              <option value="vcall">Video call</option>
+            </select>
+            <div class="k-snd">
+              <label>Pengirim</label>
+              <select id="sd" hidden>
+                <option value="in">Masuk</option>
+                <option value="out">Keluar</option>
+              </select>
+              <div class="seg">
+                <button data-t="sd" data-v="in" id="sdin">Masuk</button
+                ><button data-t="sd" data-v="out" id="sdout">Keluar</button>
+              </div>
+            </div>
+            <div class="k-txt">
+              <label>Isi pesan</label
+              ><textarea id="mx" placeholder="Tulis pesan..."></textarea>
+              <p class="hint">
+                Dukung *tebal*, _miring_, ~coret~. Enter untuk kirim,
+                Shift+Enter baris baru.
+              </p>
+            </div>
+            <div class="opt">
+              <div><label>Jam</label><input id="mt" value="21:07" /></div>
+              <div>
+                <label>Tambah jam</label
+                ><select id="stp">
+                  <option value="0">+0</option>
+                  <option value="1" selected>+1</option>
+                  <option value="2">+2</option>
+                  <option value="5">+5</option>
+                </select>
+              </div>
+              <div class="k-tick w">
+                <label>Centang</label
+                ><select id="ms">
+                  <option value="r">Dibaca</option>
+                  <option value="d">Terkirim</option>
+                  <option value="s">Terkirim 1</option>
+                  <option value="n">Tanpa</option>
+                </select>
+              </div>
+              <div class="k-dur">
+                <label>Durasi</label><input id="cd" value="0:07" />
+              </div>
+              <div class="k-call">
+                <label>Hasil panggilan</label
+                ><select id="cr">
+                  <option value="a">Terjawab</option>
+                  <option value="m">Tidak terjawab</option>
+                  <option value="x">Ditolak</option>
+                  <option value="n">Tidak ada jawaban</option>
+                </select>
+              </div>
+              <div class="w k-rep">
+                <label>Balas pesan</label
+                ><select id="mr">
+                  <option value="">- tidak -</option>
+                </select>
+              </div>
+              <div class="w k-ed">
+                <label class="sw"
+                  ><span>Diedit</span><input type="checkbox" id="edf" /><i></i
+                ></label>
+              </div>
+            </div>
+            <details id="more">
+              <summary>Opsi lain: nama grup, gambar, otomatis gantian</summary>
+              <div class="opt">
+                <div class="w">
+                  <label class="sw"
+                    ><span>Otomatis gantian Masuk / Keluar</span
+                    ><input type="checkbox" id="alt" /><i></i
+                  ></label>
+                </div>
+                <div class="w">
+                  <label>Nama pengirim (untuk grup)</label
+                  ><input id="mn" placeholder="mis. Haechan" />
+                </div>
+                <div class="w">
+                  <label>Gambar (opsional)</label
+                  ><input type="file" id="mi" accept="image/*" />
+                </div>
+              </div>
+            </details>
+            <div class="acts2">
+              <button class="g" id="swp">Tukar</button
+              ><button class="big" id="add">Tambah ke chat</button>
+            </div>
+            <button class="g full" id="cx" style="display: none">
+              Batal edit
+            </button>
+          </div>
+          <div class="card">
+            <h2>Urutan chat <span id="cnt"></span></h2>
+            <p class="hint">Ketuk teks pesan untuk mengedit.</p>
+            <div id="list"></div>
+            <button class="g" id="clr" style="margin-top: 10px">
+              Hapus semua
+            </button>
+          </div>
+        </section>
+        <section class="pane" data-p="contact">
+          <div class="card">
+            <h2>Kontak</h2>
+            <label>Nama</label><input id="cn" value="Kak Jeno" />
+            <label>Namamu (pengirim Keluar)</label
+            ><input id="imn" value="Saya" /> <label>Chat belum dibaca</label
+            ><input id="ub" type="number" min="0" max="99" value="3" />
+            <div class="row">
+              <div><label>Status</label><input id="cs" value="online" /></div>
+              <div><label>Jam HP</label><input id="ct" value="21:07" /></div>
+              <div>
+                <label>Baterai %</label
+                ><input id="bt" type="number" min="1" max="100" value="80" />
+              </div>
+            </div>
+            <label>Mode</label
+            ><select id="gm">
+              <option value="0">Chat pribadi</option>
+              <option value="1">Grup</option>
+            </select>
+            <label>Pesan disematkan (kosong = tanpa)</label
+            ><input id="pi2" placeholder="mis. Photo" />
+            <label>Foto profil</label
+            ><input type="file" id="cp" accept="image/*" />
+          </div>
+        </section>
+        <section class="pane" data-p="look">
+          <div class="card">
+            <h2>Perangkat</h2>
+            <div class="seg">
+              <button data-t="pf" data-v="ios">iPhone</button
+              ><button data-t="pf" data-v="and">Android</button>
+            </div>
+            <label>Bahasa aplikasi</label>
+            <div class="seg">
+              <button data-t="lg" data-v="id">Indonesia</button
+              ><button data-t="lg" data-v="en">English</button>
+            </div>
+            <label>Bahasa tampilan WhatsApp</label>
+            <div class="seg">
+              <button data-t="wl" data-v="id">Indonesia</button
+              ><button data-t="wl" data-v="en">English</button>
+            </div>
+          </div>
+          <div class="card">
+            <h2>Layar panggilan</h2>
+            <p class="hint">
+              Dipakai saat tampilan Telepon atau Video call dipilih di tab
+              Hasil.
+            </p>
+            <div class="row">
+              <div><label>Timer</label><input id="vt" value="00:21" /></div>
+              <div>
+                <label>Nama di layar (kosong = nama kontak)</label
+                ><input id="vn" />
+              </div>
+            </div>
+            <label class="sw"
+              ><span>Speaker aktif</span
+              ><input type="checkbox" id="vsp" checked /><i></i
+            ></label>
+            <label class="sw"
+              ><span>Mute aktif</span><input type="checkbox" id="vmu" /><i></i
+            ></label>
+            <label>Foto lawan bicara (layar penuh, video call)</label
+            ><input type="file" id="vr" accept="image/*" />
+            <label>Foto kamu (kotak kecil, video call)</label
+            ><input type="file" id="vs" accept="image/*" />
+          </div>
+          <div class="card">
+            <h2>Status dan notifikasi</h2>
+            <p class="hint">
+              Dipakai saat tampilan Status atau Notifikasi dipilih di tab Hasil.
+            </p>
+            <label>Teks status</label
+            ><textarea id="stx">Lagi capek banget hari ini 😴</textarea>
+            <div class="opt">
+              <div>
+                <label>Warna latar</label
+                ><input type="color" id="sbg" value="#128c7e" />
+              </div>
+              <div>
+                <label>Waktu status</label><input id="stm" value="2 jam lalu" />
+              </div>
+              <div>
+                <label>Jumlah bar status</label
+                ><input id="ssg" type="number" min="1" max="12" value="3" />
+              </div>
+              <div>
+                <label>Bar yang aktif</label
+                ><input id="sac" type="number" min="1" max="12" value="1" />
+              </div>
+            </div>
+            <label>Foto status (opsional)</label
+            ><input type="file" id="si" accept="image/*" />
+            <label>Keterangan foto</label><input id="scp" />
+            <label>Daftar notifikasi</label>
+            <div id="nlist"></div>
+            <div class="opt">
+              <div class="w">
+                <label>Aplikasi</label
+                ><select id="na">
+                  <option value="wa">WhatsApp</option>
+                  <option value="ig">Instagram</option>
+                  <option value="gm">Gmail</option>
+                  <option value="tw">Twitter / X</option>
+                </select>
+              </div>
+              <div><label>Judul / nama</label><input id="ntl" /></div>
+              <div>
+                <label>Waktu (kosong = label di bawah)</label><input id="ntt" />
+              </div>
+              <div class="w">
+                <label>Isi notifikasi</label><textarea id="nm2"></textarea>
+              </div>
+            </div>
+            <button class="full" id="nadd">+ Tambah notifikasi</button>
+            <div class="opt">
+              <div>
+                <label>Label waktu notifikasi</label
+                ><input id="nt" value="sekarang" />
+              </div>
+              <div>
+                <label>Tanggal layar kunci</label
+                ><input id="nd" value="Selasa, 17 November" />
+              </div>
+            </div>
+            <label>Wallpaper layar kunci</label
+            ><input type="file" id="nw" accept="image/*" />
+          </div>
+        </section>
+        <section class="pane" data-p="imp">
+          <div class="card">
+            <h2>Impor chat</h2>
+            <p class="hint">
+              Satu baris satu pesan. Format: Nama: pesan, atau 21.05 Nama:
+              pesan. Nama selain namamu dianggap pesan masuk.
+            </p>
+            <label>Tempel chat di sini</label
+            ><textarea
+              id="imp"
+              style="min-height: 140px"
+              placeholder="Kak Arka: kamu udah sampe rumah?&#10;Saya: udah kak, barusan"
+            ></textarea>
+            <button class="full big" id="impb">Impor ke chat</button>
+          </div>
+          <div class="card">
+            <h2>Data</h2>
+            <button class="g" id="rst">Reset semua ke awal</button>
+          </div>
+        </section>
+      </div>
+    </div>
+    <footer class="ftr">
+      <p><b>AU Studio</b></p>
+      <p>
+        Dibuat untuk karya fiksi dan AU. Tidak berafiliasi dengan WhatsApp,
+        Instagram, Google, atau X.
+      </p>
+      <p>
+        Data hanya tersimpan di perangkatmu. Jangan dipakai untuk menipu orang.
+      </p>
+    </footer>
+    <button class="fab" id="fab">↑ <span>Pratinjau</span></button>
+    <div id="toast"></div>
+    <div class="ov" id="ov">
+      <p>
+        Tekan lama (HP) atau klik kanan (komputer) gambar untuk simpan. Ketuk di
+        luar untuk tutup.
+      </p>
+      <img id="oi" alt="hasil" />
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
